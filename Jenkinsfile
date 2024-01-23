@@ -7,11 +7,9 @@ pipeline {
           }
       }
     }
-    stages {
-        stage(‘Test’) {
+    stage(‘Test’) {
           steps {
             sh "/opt/apache-maven/bin/mvn test"
           }
       }
-    }
 }
