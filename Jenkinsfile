@@ -6,10 +6,10 @@ pipeline {
             bat "/opt/apache-maven/bin/mvn clean package"
           }
       }
-    }
         stage(‘Test’) {
           steps {
             sh "/opt/apache-maven/bin/mvn test"
           }
       }
+    }
 }
