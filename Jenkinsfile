@@ -13,16 +13,16 @@ pipeline {
         }
         stage('Deploy Docker image') {
             steps {
-                bat 'docker build -t fatima/webservices .'
+                bat 'docker build -t fatima07/webservices .'
             }
         }
         stage('Push image to hub') {
             steps {
                 script{
-                    withCredentials([string(credentialsId: 'dockerhub-img', variable: 'dockerhubpwd')]) {
+                    withCredentials([string(credentialsId: 'fatima07', variable: 'dockerhubpwd')]) {
                     bat 'docker login -u fatima07 -p ${dockerhubpwd}'
                     }
-                    bat 'docker push fatima/webservices'
+                    bat 'docker push fatima07/webservices'
             }
         }
     }
