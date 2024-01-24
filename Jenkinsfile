@@ -21,10 +21,11 @@ pipeline {
                 script{
                     withCredentials([string(credentialsId: 'dockerhub-img', variable: 'dockerhubpwd')]) {
                     bat 'docker login -u fatima07 -p ${dockerhubpwd}'
-                }
+                    }
                     bat 'docker push fatima/webservices'
             }
         }
+    }
     }
 }
 
