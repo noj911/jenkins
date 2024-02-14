@@ -1,7 +1,7 @@
-package com.groupeisi.che444.mapping;
+package com.groupeisi.jenkins_test.mapping;
 
-import com.groupeisi.che444.dto.ProduitDTO;
-import com.groupeisi.che444.entities.Produit;
+import com.groupeisi.jenkins_test.dto.ProduitDTO;
+import com.groupeisi.jenkins_test.entities.Produit;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

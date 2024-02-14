@@ -1,4 +1,4 @@
-package com.groupeisi.che444.dto;
+package com.groupeisi.jenkins_test.dto;
 
 public class ProduitDTO {
 

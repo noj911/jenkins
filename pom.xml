@@ -10,15 +10,15 @@
 	</parent>
 	<groupId>com.groupeisi</groupId>
 	<artifactId>jenkins-test</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<description>project to sonarlint, sonarcube, sonarcloud</description>
+	<version>0.0.1</version>
 	<properties>
 		<java.version>17</java.version>
+		<docker.user/>
+		<docker.token/>
 		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
 	</properties>
 	<dependencies>
 		<!--  pour les logs et Aspect programming   -->
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -102,6 +102,29 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.2</version>
+			</plugin>
+			<!-- pluging for github action -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+					<image>
+						<name>fatima07/${project.artifactId}:${project.version}</name>
+					</image>
+					<docker>
+						<publishRegistry>
+							<username>${docker.user}</username>
+							<password>${docker.token}</password>
+							<url>https://index.docker.io/v1</url>
+						</publishRegistry>
+					</docker>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

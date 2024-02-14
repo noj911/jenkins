@@ -1,4 +1,4 @@
-package com.groupeisi.che444.entities;
+package com.groupeisi.jenkins_test.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

@@ -1,9 +1,9 @@
-package com.groupeisi.che444.service;
+package com.groupeisi.jenkins_test.service;
 
-import com.groupeisi.che444.dao.ProduitDAO;
-import com.groupeisi.che444.dto.ProduitDTO;
-import com.groupeisi.che444.entities.Produit;
-import com.groupeisi.che444.mapping.ProduitMapper;
+import com.groupeisi.jenkins_test.dao.ProduitDAO;
+import com.groupeisi.jenkins_test.dto.ProduitDTO;
+import com.groupeisi.jenkins_test.entities.Produit;
+import com.groupeisi.jenkins_test.mapping.ProduitMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

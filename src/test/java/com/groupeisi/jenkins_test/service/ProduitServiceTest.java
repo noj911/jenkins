@@ -1,8 +1,8 @@
-package com.groupeisi.che444.service;
-import com.groupeisi.che444.dao.ProduitDAO;
-import com.groupeisi.che444.dto.ProduitDTO;
-import com.groupeisi.che444.entities.Produit;
-import com.groupeisi.che444.mapping.ProduitMapper;
+package com.groupeisi.jenkins_test.service;
+import com.groupeisi.jenkins_test.dao.ProduitDAO;
+import com.groupeisi.jenkins_test.dto.ProduitDTO;
+import com.groupeisi.jenkins_test.entities.Produit;
+import com.groupeisi.jenkins_test.mapping.ProduitMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

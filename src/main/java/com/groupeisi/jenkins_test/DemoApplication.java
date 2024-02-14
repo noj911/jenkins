@@ -1,13 +1,13 @@
-package com.groupeisi.che444;
+package com.groupeisi.jenkins_test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Che444Application {
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Che444Application.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }
