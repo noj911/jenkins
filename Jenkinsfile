@@ -19,10 +19,9 @@ pipeline {
         stage('Push image to hub') {
             steps {
                 script{
-                    withCredentials([string(credentialsId: 'fatima07', variable: 'dockerhubpwd')]) {
-                    bat 'docker login -u fatima07 -p ${dockerhubpwd}'
-                    }
-                    bat 'docker push fatima07/webservices'
+                  withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpassword')]) {
+                  sh 'docker login -u fatima07 -p ${dockerhubpassword}'
+}
             }
         }
     }
