@@ -13,14 +13,14 @@ pipeline {
         }
         stage('Deploy Docker image') {
             steps {
-                bat 'docker build -t fatima07/webservices .'
+                bat 'docker build -t jeanthiakane/pipeline .'
             }
         }
         stage('Push image to hub') {
             steps {
                 script{
                   withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpassword')]) {
-                  sh 'docker login -u fatima07 -p ${dockerhubpassword}'
+                  sh 'docker login -u jeanthiakane -p ${dockerhubpassword}'
 }
             }
         }
